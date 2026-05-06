@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   lock-threads:
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - name: Lock threads after 30 days of inactivity
         uses: dessant/lock-threads@v5
