@@ -2,7 +2,7 @@ name: Generate Changelog
 
 on:
   push:
-    branches: [ v4.x ]
+    branches: [v4.x]
     paths-ignore:
       - .github/workflows/coolify-helper.yml
       - .github/workflows/coolify-helper-next.yml
@@ -10,14 +10,13 @@ on:
       - .github/workflows/coolify-realtime-next.yml
       - .github/workflows/pr-quality.yaml
   workflow_dispatch:
-
 permissions:
   contents: write
 
 jobs:
   changelog:
     name: Generate changelog
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - name: Checkout
         uses: actions/checkout@v4
