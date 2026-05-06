@@ -38,7 +38,7 @@ jobs:
           - arch: aarch64
             platform: linux/aarch64
             runner: ubuntu-24.04-arm
-    runs-on: ${{ matrix.runner }}
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - uses: actions/checkout@v5
         with:
@@ -84,7 +84,7 @@ jobs:
           cache-to: type=gha,mode=max,scope=build-${{ matrix.arch }}
 
   merge-manifest:
-    runs-on: ubuntu-24.04
+    runs-on: tenki-standard-medium-4c-8g
     needs: build-push
     steps:
       - uses: actions/checkout@v5

@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   add-comment:
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     strategy:
       matrix:
         include:

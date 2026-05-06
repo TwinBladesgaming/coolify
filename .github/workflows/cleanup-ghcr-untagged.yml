@@ -2,13 +2,12 @@ name: Cleanup Untagged GHCR Images
 
 on:
   workflow_dispatch:
-
 permissions:
   packages: write
 
 jobs:
   cleanup-all-packages:
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     strategy:
       matrix:
         package: ['coolify', 'coolify-helper', 'coolify-realtime', 'coolify-testing-host']

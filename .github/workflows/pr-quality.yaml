@@ -11,7 +11,7 @@ on:
 
 jobs:
   pr-quality:
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - uses: peakoss/anti-slop@v0
         with:
@@ -40,7 +40,7 @@ jobs:
           max-emoji-count: 2
           max-code-references: 5
           require-linked-issue: false
-          blocked-terms:  |
+          blocked-terms: |
             STRAWBERRY
             🤖 Generated with Claude Code
             Generated with Claude Code
