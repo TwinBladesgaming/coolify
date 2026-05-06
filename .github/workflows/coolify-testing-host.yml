@@ -2,7 +2,7 @@ name: Coolify Testing Host
 
 on:
   push:
-    branches: [ "next" ]
+    branches: ["next"]
     paths:
       - .github/workflows/coolify-testing-host.yml
       - docker/testing-host/Dockerfile
@@ -27,7 +27,7 @@ jobs:
           - arch: aarch64
             platform: linux/aarch64
             runner: ubuntu-24.04-arm
-    runs-on: ${{ matrix.runner }}
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - uses: actions/checkout@v5
         with:
@@ -61,7 +61,7 @@ jobs:
             coolify.managed=true
 
   merge-manifest:
-    runs-on: ubuntu-24.04
+    runs-on: tenki-standard-medium-4c-8g
     needs: build-push
     steps:
       - uses: actions/checkout@v5
